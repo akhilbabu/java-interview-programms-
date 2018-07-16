@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
  * @since 10-Jul-2018
  * @version 1.0
  */
-public class Test
+public class Email
 {
 
 	public static void main(String[] args) throws IOException
