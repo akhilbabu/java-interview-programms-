@@ -23,11 +23,7 @@ public class Test
 		String line;
 		while ((line = br.readLine()) != null)
 		{
-			Arrays.stream(line.split(" ")).filter(p2 -> {
-				Pattern p = Pattern.compile("([\\w\\-]([\\.\\w])+[\\w]+@([\\w\\-]+\\.)+[A-Za-z]{2,4})");
-				Matcher match = p.matcher(p2);
-				return match.find();
-			}).collect(Collectors.toList()).forEach(System.out::println);
+			Arrays.stream(line.split(" ")).filter(p2 -> Pattern.compile("([\\w\\-]([\\.\\w])+[\\w]+@([\\w\\-]+\\.)+[A-Za-z]{2,4})").matcher(p2).find()).collect(Collectors.toList()).forEach(System.out::println);
 		}
 	}
 }
